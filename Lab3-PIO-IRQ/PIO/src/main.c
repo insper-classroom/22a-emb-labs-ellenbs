@@ -46,6 +46,8 @@
 /* variaveis globais                                                    */
 /************************************************************************/
 
+volatile char but_flag;
+
 /************************************************************************/
 /* prototype                                                            */
 /************************************************************************/
@@ -65,7 +67,7 @@ void pisca_led(int n, int t);
  */
 void but_callback(void)
 {
-  pisca_led(5, 200);
+  but_flag = 1;
 }
 
 /************************************************************************/
@@ -88,14 +90,15 @@ void io_init(void)
 
   // Configura led
 	pmc_enable_periph_clk(LED_PIO_ID);
-	pio_configure(LED_PIO, PIO_OUTPUT_0, LED_IDX_MASK, PIO_DEFAULT);
+	pio_configure(LED_PIO, PIO_OUTPUT_1, LED_IDX_MASK, PIO_DEFAULT);
 
   // Inicializa clock do periférico PIO responsavel pelo botao
 	pmc_enable_periph_clk(BUT_PIO_ID);
 
   // Configura PIO para lidar com o pino do botão como entrada
   // com pull-up
-	pio_configure(BUT_PIO, PIO_INPUT, BUT_IDX_MASK, PIO_PULLUP);
+	pio_configure(BUT_PIO, PIO_INPUT, BUT_IDX_MASK, PIO_PULLUP | PIO_DEBOUNCE);
+	pio_set_debounce_filter(BUT_PIO, BUT_IDX_MASK, 60);
 
   // Configura interrupção no pino referente ao botao e associa
   // função de callback caso uma interrupção for gerada
@@ -103,7 +106,7 @@ void io_init(void)
   pio_handler_set(BUT_PIO,
                   BUT_PIO_ID,
                   BUT_IDX_MASK,
-                  PIO_IT_FALL_EDGE,
+                  PIO_IT_RISE_EDGE,
                   but_callback);
 
   // Ativa interrupção e limpa primeira IRQ gerada na ativacao
@@ -136,5 +139,10 @@ void main(void)
 	// aplicacoes embarcadas no devem sair do while(1).
 	while(1)
   {
+	  if(but_flag){
+		  pisca_led(5,100);
+		  but_flag = 0;
+	  }
+	  pmc_sleep(SAM_PM_SMODE_SLEEP_WFI);
 	}
 }
