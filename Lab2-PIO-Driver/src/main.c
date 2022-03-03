@@ -266,6 +266,11 @@ uint32_t _pio_get(Pio *p_pio, const pio_type_t ul_type,
 	}
 }
 
+void _delay_ms()
+{
+	
+}
+
 
 
 /************************************************************************/
@@ -306,7 +311,8 @@ int main(void)
 			  _pio_clear(LED_3_PIO, LED_3_IDX_MASK);    // Coloca 0 no pino do LED aceso
 			  delay_ms(100);
 			  _pio_set(LED_3_PIO, LED_3_IDX_MASK);
-			  delay_ms(100);}
+			  delay_ms(100);
+		   }
 		}
   }
   return 0;
