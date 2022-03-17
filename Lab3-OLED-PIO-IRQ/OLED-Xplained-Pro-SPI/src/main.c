@@ -36,6 +36,7 @@
 
 volatile char but_1_flag;
 volatile char but_2_flag;
+volatile char but_2_flag_;
 volatile char but_3_flag;
 
 void but_1_callback(void)
@@ -53,6 +54,7 @@ void but_2_callback(void)
 	if (pio_get(BUT_2_PIO, PIO_INPUT, BUT_2_IDX_MASK)) {
 		// PINO == 1 --> Borda de subida
 		but_2_flag = 1;
+		but_2_flag_ =1;
 		} else {
 		// PINO == 0 --> Borda de descida
 	}
@@ -161,29 +163,40 @@ int main (void)
 	while(1) {
 		
 		if(but_1_flag){
-			pisca_led(3,delay);
 			char str[128]; //
 			sprintf(str, "%d", delay); //
 			gfx_mono_draw_string(str, 0, 0, &sysfont);
+			pisca_led(3,delay);
 			but_1_flag = 0;
 		}
 		
 		if(but_2_flag){
 			delay -= 100;
-			pisca_led(3,delay);
 			char str[128]; //
 			sprintf(str, "%d", delay); //
 			gfx_mono_draw_string(str, 0, 0, &sysfont);
+			pisca_led(3,delay);
 			but_2_flag = 0;
+			but_2_flag_ = 0;
+		}
+		
+		while(but_2_flag_){
+			delay += 100;
+			char str[128]; //
+			sprintf(str, "%d", delay); //
+			gfx_mono_draw_string(str, 0, 0, &sysfont);
+			pisca_led(3,delay);
+			but_2_flag_ = 0;
+			
 		}
 		
 		if(but_3_flag){
-			delay += 100;
-			pisca_led(3,delay);
-			char str[128]; //
-			sprintf(str, "%d", delay); //
-			gfx_mono_draw_string(str, 0, 0, &sysfont);
+			pio_set(LED_1_PIO, LED_1_IDX_MASK);
 			but_3_flag = 0;
+			but_1_flag = 0;
+			but_2_flag = 0;
+			but_2_flag_ = 0;
+			
 		}
 		
 		
