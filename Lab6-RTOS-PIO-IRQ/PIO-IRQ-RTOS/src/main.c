@@ -107,13 +107,29 @@ extern void vApplicationMallocFailedHook(void) {
 /************************************************************************/
 
 void but_callback(void) {
-  BaseType_t xHigherPriorityTaskWoken = pdFALSE;
-  xSemaphoreGiveFromISR(xSemaphoreBut, &xHigherPriorityTaskWoken);
+	int delayTicks -= 100;
+
+	/* envia nova frequencia para a task_led */
+	xQueueSendFromISR(xQueueLedFreq, (void *)&delayTicks, 10);
+	
+	/* garante range da freq. */
+	if (delayTicks == 100) {
+		delayTicks = 900;
+	}
+  
 }
 
 void but_2_callback(void) {
-	BaseType_t xHigherPriorityTaskWoken = pdFALSE;
-	xSemaphoreGiveFromISR(xSemaphoreBut2, &xHigherPriorityTaskWoken);
+	int delayTicks += 100;
+
+	/* envia nova frequencia para a task_led */
+	xQueueSendFromISR(xQueueLedFreq2, (void *)&delayTicks, 10);
+	
+	/* garante range da freq. */
+	if (delayTicks == 100) {
+		delayTicks = 900;
+	}
+	
 }
 
 /************************************************************************/
@@ -153,49 +169,6 @@ static void task_led(void *pvParameters) {
 
     /* suspende por delayMs */
     vTaskDelay(delayMs);
-  }
-}
-
-static void task_but(void *pvParameters) {
-
-  /* iniciliza botao */
-  BUT_init();
-
-  uint32_t delayTicks = 2000;
-
-  for (;;) {
-    /* aguarda por tempo inderteminado até a liberacao do semaforo */
-    if (xSemaphoreTake(xSemaphoreBut, 1000)) {
-      /* atualiza frequencia */
-      delayTicks -= 100;
-
-      /* envia nova frequencia para a task_led */
-      xQueueSend(xQueueLedFreq, (void *)&delayTicks, 10);
-	    
-      printf("task_but: %d \n", delayTicks);
-
-      /* garante range da freq. */
-      if (delayTicks == 100) {
-        delayTicks = 900;
-      }
-    }
-	
-	 if (xSemaphoreTake(xSemaphoreBut2, 1000)) {
-		 /* atualiza frequencia */
-		 delayTicks += 100;
-
-		 /* envia nova frequencia para a task_led */
-		 xQueueSend(xQueueLedFreq2, (void *)&delayTicks, 10);
-		 
-		 printf("task_but: %d \n", delayTicks);
-
-		 /* garante range da freq. */
-		 if (delayTicks == 100) {
-			 delayTicks = 900;
-		 }
-	 }
-	
-	
   }
 }
 
@@ -289,15 +262,6 @@ int main(void) {
   configure_console();
 	
   printf("Sys init ok \n");
-
-  /* Attempt to create a semaphore. */
-  xSemaphoreBut = xSemaphoreCreateBinary();
-  if (xSemaphoreBut == NULL)
-    printf("falha em criar o semaforo \n");
-	
-  xSemaphoreBut2 = xSemaphoreCreateBinary();
-  if (xSemaphoreBut2 == NULL)
-	printf("falha em criar o semaforo \n");
 
   /* cria queue com 32 "espacos" */
   /* cada espaço possui o tamanho de um inteiro*/

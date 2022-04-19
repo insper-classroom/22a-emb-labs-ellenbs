@@ -12,6 +12,9 @@
 #define AFEC_POT_ID ID_AFEC0
 #define AFEC_POT_CHANNEL 0 // Canal do pino PD30
 
+int values[] = {0,0,0,0,0,0,0,0,0,0};
+int counter = 0;
+
 /************************************************************************/
 /* RTOS                                                                */
 /************************************************************************/
@@ -32,6 +35,7 @@ extern void xPortSysTickHandler(void);
 
 /** Queue for msg log send data */
 QueueHandle_t xQueueADC;
+QueueHandle_t xQueuePROC;
 
 typedef struct {
   uint value;
@@ -45,6 +49,7 @@ static void USART1_init(void);
 void TC_init(Tc *TC, int ID_TC, int TC_CHANNEL, int freq);
 static void config_AFEC_pot(Afec *afec, uint32_t afec_id, uint32_t afec_channel, afec_callback_t callback);
 static void configure_console(void);
+int mean(uint values[]);
 
 /************************************************************************/
 /* RTOS application funcs                                               */
@@ -106,25 +111,64 @@ static void AFEC_pot_Callback(void) {
 static void task_adc(void *pvParameters) {
 
   // configura ADC e TC para controlar a leitura
-  config_AFEC_pot(AFEC_POT, AFEC_POT_ID, AFEC_POT_CHANNEL, AFEC_pot_Callback);
-  TC_init(TC0, ID_TC1, 1, 10);
-  tc_start(TC0, 1);
+  //config_AFEC_pot(AFEC_POT, AFEC_POT_ID, AFEC_POT_CHANNEL, AFEC_pot_Callback);
+  //TC_init(TC0, ID_TC1, 1, 10);
+  //tc_start(TC0, 1);
 
   // variável para recever dados da fila
   adcData adc;
 
-  while (1) {
-    if (xQueueReceive(xQueueADC, &(adc), 1000)) {
-      printf("ADC: %d \n", adc);
-    } else {
-      printf("Nao chegou um novo dado em 1 segundo");
-    }
-  }
+	int mean;
+	while (1) {
+		if (xQueueReceive(xQueueADC, &mean, 1000)) {
+			printf("Mean: %d \n", mean);
+		}
+	}
+}
+
+static void task_proc(void *pvParameters) {
+
+	// configura ADC e TC para controlar a leitura
+	config_AFEC_pot(AFEC_POT, AFEC_POT_ID, AFEC_POT_CHANNEL, AFEC_pot_Callback);
+	TC_init(TC0, ID_TC1, 1, 10);
+	tc_start(TC0, 1);
+
+	// variável para recever dados da fila
+	adcData adc;
+	int counter = 0;
+	int mean;
+	int total = 0;
+
+	while (1) {
+		if (xQueueReceive(xQueuePROC, &(adc), 1000)) {
+			//printf("Proc: %d \n", adc);
+			values[counter] = adc.value;
+			counter++;
+			if (counter > 9){
+				counter = 0;
+				int media_value = mean(values);
+				xQueueSend(xQueueADC,(void *)&media_value,10);
+			}
+			
+			} else {
+			printf("Nao chegou um novo dado em 1 segundo");
+		}
+	}
 }
 
 /************************************************************************/
 /* funcoes                                                              */
 /************************************************************************/
+
+int mean(uint values[]) {
+	
+	int soma = 0;
+	for (int i = 0; i < 10; i++) {
+		soma += values[i];
+	}
+	return soma/10;
+}
+
 
 /**
  * \brief Configure the console UART.
@@ -226,6 +270,11 @@ int main(void) {
   if (xTaskCreate(task_adc, "ADC", TASK_ADC_STACK_SIZE, NULL,
                   TASK_ADC_STACK_PRIORITY, NULL) != pdPASS) {
     printf("Failed to create test ADC task\r\n");
+  }
+  
+  if (xTaskCreate(task_proc, "PROC", TASK_PROC_STACK_SIZE, NULL,
+  TASK_PROC_STACK_PRIORITY, NULL) != pdPASS) {
+	  printf("Failed to create test PROC task\r\n");
   }
 
   vTaskStartScheduler();
