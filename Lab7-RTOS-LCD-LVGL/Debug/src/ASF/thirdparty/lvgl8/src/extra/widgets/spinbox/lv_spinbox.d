@@ -164,56 +164,56 @@ src/ASF/thirdparty/lvgl8/src/extra/widgets/spinbox/lv_spinbox.d \
  ../src/ASF/thirdparty/lvgl8/src/extra/widgets/spinbox/../../../../src/extra/lv_extra.h \
  ../src/ASF/thirdparty/lvgl8/src/extra/widgets/spinbox/../../../../src/extra/widgets/lv_widgets.h \
  ../src/ASF/thirdparty/lvgl8/src/extra/widgets/spinbox/../../../../src/extra/widgets/animimg/lv_animimg.h \
- ../src/ASF/thirdparty/lvgl8/src/extra/widgets/spinbox/../../../../src/extra/widgets/animimg/../../../lvgl.h \
+ c:\users\ellen\ shen\desktop\22a-emb-labs-ellenbs\lab7-rtos-lcd-lvgl\src\asf\thirdparty\lvgl8\src\lvgl.h \
  ../src/ASF/thirdparty/lvgl8/src/extra/widgets/spinbox/../../../../src/extra/widgets/calendar/lv_calendar.h \
- ../src/ASF/thirdparty/lvgl8/src/extra/widgets/spinbox/../../../../src/extra/widgets/calendar/../../../widgets/lv_btnmatrix.h \
+ c:\users\ellen\ shen\desktop\22a-emb-labs-ellenbs\lab7-rtos-lcd-lvgl\src\asf\thirdparty\lvgl8\src\widgets\lv_btnmatrix.h \
  ../src/ASF/thirdparty/lvgl8/src/extra/widgets/spinbox/../../../../src/extra/widgets/calendar/lv_calendar_header_arrow.h \
- ../src/ASF/thirdparty/lvgl8/src/extra/widgets/spinbox/../../../../src/extra/widgets/calendar/../../../core/lv_obj.h \
+ c:\users\ellen\ shen\desktop\22a-emb-labs-ellenbs\lab7-rtos-lcd-lvgl\src\asf\thirdparty\lvgl8\src\core\lv_obj.h \
  ../src/ASF/thirdparty/lvgl8/src/extra/widgets/spinbox/../../../../src/extra/widgets/calendar/lv_calendar_header_dropdown.h \
  ../src/ASF/thirdparty/lvgl8/src/extra/widgets/spinbox/../../../../src/extra/widgets/chart/lv_chart.h \
- ../src/ASF/thirdparty/lvgl8/src/extra/widgets/spinbox/../../../../src/extra/widgets/chart/../../../lvgl.h \
+ c:\users\ellen\ shen\desktop\22a-emb-labs-ellenbs\lab7-rtos-lcd-lvgl\src\asf\thirdparty\lvgl8\src\lvgl.h \
  ../src/ASF/thirdparty/lvgl8/src/extra/widgets/spinbox/../../../../src/extra/widgets/keyboard/lv_keyboard.h \
- ../src/ASF/thirdparty/lvgl8/src/extra/widgets/spinbox/../../../../src/extra/widgets/keyboard/../../../widgets/lv_btnmatrix.h \
+ c:\users\ellen\ shen\desktop\22a-emb-labs-ellenbs\lab7-rtos-lcd-lvgl\src\asf\thirdparty\lvgl8\src\widgets\lv_btnmatrix.h \
  ../src/ASF/thirdparty/lvgl8/src/extra/widgets/spinbox/../../../../src/extra/widgets/list/lv_list.h \
- ../src/ASF/thirdparty/lvgl8/src/extra/widgets/spinbox/../../../../src/extra/widgets/list/../../../core/lv_obj.h \
+ c:\users\ellen\ shen\desktop\22a-emb-labs-ellenbs\lab7-rtos-lcd-lvgl\src\asf\thirdparty\lvgl8\src\core\lv_obj.h \
  ../src/ASF/thirdparty/lvgl8/src/extra/widgets/spinbox/../../../../src/extra/widgets/list/../../layouts/flex/lv_flex.h \
- c:\users\ellen\ shen\desktop\same70-examples\screens\rtos-tft-lcd-ili9341-lvgl\src\asf\thirdparty\lvgl8\src\core\lv_obj.h \
+ c:\users\ellen\ shen\desktop\22a-emb-labs-ellenbs\lab7-rtos-lcd-lvgl\src\asf\thirdparty\lvgl8\src\core\lv_obj.h \
  ../src/ASF/thirdparty/lvgl8/src/extra/widgets/spinbox/../../../../src/extra/widgets/msgbox/lv_msgbox.h \
- ../src/ASF/thirdparty/lvgl8/src/extra/widgets/spinbox/../../../../src/extra/widgets/msgbox/../../../lvgl.h \
+ c:\users\ellen\ shen\desktop\22a-emb-labs-ellenbs\lab7-rtos-lcd-lvgl\src\asf\thirdparty\lvgl8\src\lvgl.h \
  ../src/ASF/thirdparty/lvgl8/src/extra/widgets/spinbox/../../../../src/extra/widgets/meter/lv_meter.h \
- ../src/ASF/thirdparty/lvgl8/src/extra/widgets/spinbox/../../../../src/extra/widgets/meter/../../../lvgl.h \
+ c:\users\ellen\ shen\desktop\22a-emb-labs-ellenbs\lab7-rtos-lcd-lvgl\src\asf\thirdparty\lvgl8\src\lvgl.h \
  ../src/ASF/thirdparty/lvgl8/src/extra/widgets/spinbox/../../../../src/extra/widgets/spinbox/lv_spinbox.h \
  ../src/ASF/thirdparty/lvgl8/src/extra/widgets/spinbox/../../../../src/extra/widgets/spinner/lv_spinner.h \
- ../src/ASF/thirdparty/lvgl8/src/extra/widgets/spinbox/../../../../src/extra/widgets/spinner/../../../lvgl.h \
+ c:\users\ellen\ shen\desktop\22a-emb-labs-ellenbs\lab7-rtos-lcd-lvgl\src\asf\thirdparty\lvgl8\src\lvgl.h \
  ../src/ASF/thirdparty/lvgl8/src/extra/widgets/spinbox/../../../../src/extra/widgets/tabview/lv_tabview.h \
- ../src/ASF/thirdparty/lvgl8/src/extra/widgets/spinbox/../../../../src/extra/widgets/tabview/../../../lvgl.h \
+ c:\users\ellen\ shen\desktop\22a-emb-labs-ellenbs\lab7-rtos-lcd-lvgl\src\asf\thirdparty\lvgl8\src\lvgl.h \
  ../src/ASF/thirdparty/lvgl8/src/extra/widgets/spinbox/../../../../src/extra/widgets/tileview/lv_tileview.h \
- ../src/ASF/thirdparty/lvgl8/src/extra/widgets/spinbox/../../../../src/extra/widgets/tileview/../../../core/lv_obj.h \
+ c:\users\ellen\ shen\desktop\22a-emb-labs-ellenbs\lab7-rtos-lcd-lvgl\src\asf\thirdparty\lvgl8\src\core\lv_obj.h \
  ../src/ASF/thirdparty/lvgl8/src/extra/widgets/spinbox/../../../../src/extra/widgets/win/lv_win.h \
  ../src/ASF/thirdparty/lvgl8/src/extra/widgets/spinbox/../../../../src/extra/widgets/win/../../../lvgl.h \
  ../src/ASF/thirdparty/lvgl8/src/extra/widgets/spinbox/../../../../src/extra/widgets/colorwheel/lv_colorwheel.h \
- ../src/ASF/thirdparty/lvgl8/src/extra/widgets/spinbox/../../../../src/extra/widgets/colorwheel/../../../lvgl.h \
+ c:\users\ellen\ shen\desktop\22a-emb-labs-ellenbs\lab7-rtos-lcd-lvgl\src\asf\thirdparty\lvgl8\src\lvgl.h \
  ../src/ASF/thirdparty/lvgl8/src/extra/widgets/spinbox/../../../../src/extra/widgets/led/lv_led.h \
  ../src/ASF/thirdparty/lvgl8/src/extra/widgets/spinbox/../../../../src/extra/widgets/led/../../../lvgl.h \
  ../src/ASF/thirdparty/lvgl8/src/extra/widgets/spinbox/../../../../src/extra/widgets/imgbtn/lv_imgbtn.h \
- ../src/ASF/thirdparty/lvgl8/src/extra/widgets/spinbox/../../../../src/extra/widgets/imgbtn/../../../lvgl.h \
+ c:\users\ellen\ shen\desktop\22a-emb-labs-ellenbs\lab7-rtos-lcd-lvgl\src\asf\thirdparty\lvgl8\src\lvgl.h \
  ../src/ASF/thirdparty/lvgl8/src/extra/widgets/spinbox/../../../../src/extra/widgets/span/lv_span.h \
- ../src/ASF/thirdparty/lvgl8/src/extra/widgets/spinbox/../../../../src/extra/widgets/span/../../../lvgl.h \
+ c:\users\ellen\ shen\desktop\22a-emb-labs-ellenbs\lab7-rtos-lcd-lvgl\src\asf\thirdparty\lvgl8\src\lvgl.h \
  ../src/ASF/thirdparty/lvgl8/src/extra/widgets/spinbox/../../../../src/extra/layouts/lv_layouts.h \
  ../src/ASF/thirdparty/lvgl8/src/extra/widgets/spinbox/../../../../src/extra/layouts/flex/lv_flex.h \
  ../src/ASF/thirdparty/lvgl8/src/extra/widgets/spinbox/../../../../src/extra/layouts/grid/lv_grid.h \
- ../src/ASF/thirdparty/lvgl8/src/extra/widgets/spinbox/../../../../src/extra/layouts/grid/../../../core/lv_obj.h \
+ c:\users\ellen\ shen\desktop\22a-emb-labs-ellenbs\lab7-rtos-lcd-lvgl\src\asf\thirdparty\lvgl8\src\core\lv_obj.h \
  ../src/ASF/thirdparty/lvgl8/src/extra/widgets/spinbox/../../../../src/extra/themes/lv_themes.h \
  ../src/ASF/thirdparty/lvgl8/src/extra/widgets/spinbox/../../../../src/extra/themes/default/lv_theme_default.h \
- ../src/ASF/thirdparty/lvgl8/src/extra/widgets/spinbox/../../../../src/extra/themes/default/../../../core/lv_obj.h \
+ c:\users\ellen\ shen\desktop\22a-emb-labs-ellenbs\lab7-rtos-lcd-lvgl\src\asf\thirdparty\lvgl8\src\core\lv_obj.h \
  ../src/ASF/thirdparty/lvgl8/src/extra/widgets/spinbox/../../../../src/extra/themes/mono/lv_theme_mono.h \
  ../src/ASF/thirdparty/lvgl8/src/extra/widgets/spinbox/../../../../src/extra/themes/mono/../../../core/lv_obj.h \
  ../src/ASF/thirdparty/lvgl8/src/extra/widgets/spinbox/../../../../src/extra/themes/basic/lv_theme_basic.h \
- ../src/ASF/thirdparty/lvgl8/src/extra/widgets/spinbox/../../../../src/extra/themes/basic/../../../core/lv_obj.h \
+ c:\users\ellen\ shen\desktop\22a-emb-labs-ellenbs\lab7-rtos-lcd-lvgl\src\asf\thirdparty\lvgl8\src\core\lv_obj.h \
  ../src/ASF/thirdparty/lvgl8/src/extra/widgets/spinbox/../../../../src/extra/others/lv_others.h \
  ../src/ASF/thirdparty/lvgl8/src/extra/widgets/spinbox/../../../../src/extra/others/snapshot/lv_snapshot.h \
- ../src/ASF/thirdparty/lvgl8/src/extra/widgets/spinbox/../../../../src/extra/others/snapshot/../../../lv_conf_internal.h \
- ../src/ASF/thirdparty/lvgl8/src/extra/widgets/spinbox/../../../../src/extra/others/snapshot/../../../core/lv_obj.h \
+ c:\users\ellen\ shen\desktop\22a-emb-labs-ellenbs\lab7-rtos-lcd-lvgl\src\asf\thirdparty\lvgl8\src\lv_conf_internal.h \
+ c:\users\ellen\ shen\desktop\22a-emb-labs-ellenbs\lab7-rtos-lcd-lvgl\src\asf\thirdparty\lvgl8\src\core\lv_obj.h \
  ../src/ASF/thirdparty/lvgl8/src/extra/widgets/spinbox/../../../../src/extra/libs/lv_libs.h \
  ../src/ASF/thirdparty/lvgl8/src/extra/widgets/spinbox/../../../../src/extra/libs/bmp/lv_bmp.h \
  ../src/ASF/thirdparty/lvgl8/src/extra/widgets/spinbox/../../../../src/extra/libs/bmp/../../../lv_conf_internal.h \
@@ -238,9 +238,9 @@ src/ASF/thirdparty/lvgl8/src/extra/widgets/spinbox/lv_spinbox.d \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\machine\types.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\sys\stdio.h \
  ../src/ASF/thirdparty/lvgl8/src/extra/widgets/spinbox/../../../../src/extra/libs/freetype/lv_freetype.h \
- ../src/ASF/thirdparty/lvgl8/src/extra/widgets/spinbox/../../../../src/extra/libs/freetype/../../../lvgl.h \
+ c:\users\ellen\ shen\desktop\22a-emb-labs-ellenbs\lab7-rtos-lcd-lvgl\src\asf\thirdparty\lvgl8\src\lvgl.h \
  ../src/ASF/thirdparty/lvgl8/src/extra/widgets/spinbox/../../../../src/extra/libs/rlottie/lv_rlottie.h \
- ../src/ASF/thirdparty/lvgl8/src/extra/widgets/spinbox/../../../../src/extra/libs/rlottie/../../../lvgl.h \
+ c:\users\ellen\ shen\desktop\22a-emb-labs-ellenbs\lab7-rtos-lcd-lvgl\src\asf\thirdparty\lvgl8\src\lvgl.h \
  ../src/ASF/thirdparty/lvgl8/src/extra/widgets/spinbox/../../../misc/lv_assert.h
 
 ../src/ASF/thirdparty/lvgl8/src/extra/widgets/spinbox/lv_spinbox.h:
@@ -569,55 +569,55 @@ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-no
 
 ../src/ASF/thirdparty/lvgl8/src/extra/widgets/spinbox/../../../../src/extra/widgets/animimg/lv_animimg.h:
 
-../src/ASF/thirdparty/lvgl8/src/extra/widgets/spinbox/../../../../src/extra/widgets/animimg/../../../lvgl.h:
+c:\users\ellen\ shen\desktop\22a-emb-labs-ellenbs\lab7-rtos-lcd-lvgl\src\asf\thirdparty\lvgl8\src\lvgl.h:
 
 ../src/ASF/thirdparty/lvgl8/src/extra/widgets/spinbox/../../../../src/extra/widgets/calendar/lv_calendar.h:
 
-../src/ASF/thirdparty/lvgl8/src/extra/widgets/spinbox/../../../../src/extra/widgets/calendar/../../../widgets/lv_btnmatrix.h:
+c:\users\ellen\ shen\desktop\22a-emb-labs-ellenbs\lab7-rtos-lcd-lvgl\src\asf\thirdparty\lvgl8\src\widgets\lv_btnmatrix.h:
 
 ../src/ASF/thirdparty/lvgl8/src/extra/widgets/spinbox/../../../../src/extra/widgets/calendar/lv_calendar_header_arrow.h:
 
-../src/ASF/thirdparty/lvgl8/src/extra/widgets/spinbox/../../../../src/extra/widgets/calendar/../../../core/lv_obj.h:
+c:\users\ellen\ shen\desktop\22a-emb-labs-ellenbs\lab7-rtos-lcd-lvgl\src\asf\thirdparty\lvgl8\src\core\lv_obj.h:
 
 ../src/ASF/thirdparty/lvgl8/src/extra/widgets/spinbox/../../../../src/extra/widgets/calendar/lv_calendar_header_dropdown.h:
 
 ../src/ASF/thirdparty/lvgl8/src/extra/widgets/spinbox/../../../../src/extra/widgets/chart/lv_chart.h:
 
-../src/ASF/thirdparty/lvgl8/src/extra/widgets/spinbox/../../../../src/extra/widgets/chart/../../../lvgl.h:
+c:\users\ellen\ shen\desktop\22a-emb-labs-ellenbs\lab7-rtos-lcd-lvgl\src\asf\thirdparty\lvgl8\src\lvgl.h:
 
 ../src/ASF/thirdparty/lvgl8/src/extra/widgets/spinbox/../../../../src/extra/widgets/keyboard/lv_keyboard.h:
 
-../src/ASF/thirdparty/lvgl8/src/extra/widgets/spinbox/../../../../src/extra/widgets/keyboard/../../../widgets/lv_btnmatrix.h:
+c:\users\ellen\ shen\desktop\22a-emb-labs-ellenbs\lab7-rtos-lcd-lvgl\src\asf\thirdparty\lvgl8\src\widgets\lv_btnmatrix.h:
 
 ../src/ASF/thirdparty/lvgl8/src/extra/widgets/spinbox/../../../../src/extra/widgets/list/lv_list.h:
 
-../src/ASF/thirdparty/lvgl8/src/extra/widgets/spinbox/../../../../src/extra/widgets/list/../../../core/lv_obj.h:
+c:\users\ellen\ shen\desktop\22a-emb-labs-ellenbs\lab7-rtos-lcd-lvgl\src\asf\thirdparty\lvgl8\src\core\lv_obj.h:
 
 ../src/ASF/thirdparty/lvgl8/src/extra/widgets/spinbox/../../../../src/extra/widgets/list/../../layouts/flex/lv_flex.h:
 
-c:\users\ellen\ shen\desktop\same70-examples\screens\rtos-tft-lcd-ili9341-lvgl\src\asf\thirdparty\lvgl8\src\core\lv_obj.h:
+c:\users\ellen\ shen\desktop\22a-emb-labs-ellenbs\lab7-rtos-lcd-lvgl\src\asf\thirdparty\lvgl8\src\core\lv_obj.h:
 
 ../src/ASF/thirdparty/lvgl8/src/extra/widgets/spinbox/../../../../src/extra/widgets/msgbox/lv_msgbox.h:
 
-../src/ASF/thirdparty/lvgl8/src/extra/widgets/spinbox/../../../../src/extra/widgets/msgbox/../../../lvgl.h:
+c:\users\ellen\ shen\desktop\22a-emb-labs-ellenbs\lab7-rtos-lcd-lvgl\src\asf\thirdparty\lvgl8\src\lvgl.h:
 
 ../src/ASF/thirdparty/lvgl8/src/extra/widgets/spinbox/../../../../src/extra/widgets/meter/lv_meter.h:
 
-../src/ASF/thirdparty/lvgl8/src/extra/widgets/spinbox/../../../../src/extra/widgets/meter/../../../lvgl.h:
+c:\users\ellen\ shen\desktop\22a-emb-labs-ellenbs\lab7-rtos-lcd-lvgl\src\asf\thirdparty\lvgl8\src\lvgl.h:
 
 ../src/ASF/thirdparty/lvgl8/src/extra/widgets/spinbox/../../../../src/extra/widgets/spinbox/lv_spinbox.h:
 
 ../src/ASF/thirdparty/lvgl8/src/extra/widgets/spinbox/../../../../src/extra/widgets/spinner/lv_spinner.h:
 
-../src/ASF/thirdparty/lvgl8/src/extra/widgets/spinbox/../../../../src/extra/widgets/spinner/../../../lvgl.h:
+c:\users\ellen\ shen\desktop\22a-emb-labs-ellenbs\lab7-rtos-lcd-lvgl\src\asf\thirdparty\lvgl8\src\lvgl.h:
 
 ../src/ASF/thirdparty/lvgl8/src/extra/widgets/spinbox/../../../../src/extra/widgets/tabview/lv_tabview.h:
 
-../src/ASF/thirdparty/lvgl8/src/extra/widgets/spinbox/../../../../src/extra/widgets/tabview/../../../lvgl.h:
+c:\users\ellen\ shen\desktop\22a-emb-labs-ellenbs\lab7-rtos-lcd-lvgl\src\asf\thirdparty\lvgl8\src\lvgl.h:
 
 ../src/ASF/thirdparty/lvgl8/src/extra/widgets/spinbox/../../../../src/extra/widgets/tileview/lv_tileview.h:
 
-../src/ASF/thirdparty/lvgl8/src/extra/widgets/spinbox/../../../../src/extra/widgets/tileview/../../../core/lv_obj.h:
+c:\users\ellen\ shen\desktop\22a-emb-labs-ellenbs\lab7-rtos-lcd-lvgl\src\asf\thirdparty\lvgl8\src\core\lv_obj.h:
 
 ../src/ASF/thirdparty/lvgl8/src/extra/widgets/spinbox/../../../../src/extra/widgets/win/lv_win.h:
 
@@ -625,7 +625,7 @@ c:\users\ellen\ shen\desktop\same70-examples\screens\rtos-tft-lcd-ili9341-lvgl\s
 
 ../src/ASF/thirdparty/lvgl8/src/extra/widgets/spinbox/../../../../src/extra/widgets/colorwheel/lv_colorwheel.h:
 
-../src/ASF/thirdparty/lvgl8/src/extra/widgets/spinbox/../../../../src/extra/widgets/colorwheel/../../../lvgl.h:
+c:\users\ellen\ shen\desktop\22a-emb-labs-ellenbs\lab7-rtos-lcd-lvgl\src\asf\thirdparty\lvgl8\src\lvgl.h:
 
 ../src/ASF/thirdparty/lvgl8/src/extra/widgets/spinbox/../../../../src/extra/widgets/led/lv_led.h:
 
@@ -633,11 +633,11 @@ c:\users\ellen\ shen\desktop\same70-examples\screens\rtos-tft-lcd-ili9341-lvgl\s
 
 ../src/ASF/thirdparty/lvgl8/src/extra/widgets/spinbox/../../../../src/extra/widgets/imgbtn/lv_imgbtn.h:
 
-../src/ASF/thirdparty/lvgl8/src/extra/widgets/spinbox/../../../../src/extra/widgets/imgbtn/../../../lvgl.h:
+c:\users\ellen\ shen\desktop\22a-emb-labs-ellenbs\lab7-rtos-lcd-lvgl\src\asf\thirdparty\lvgl8\src\lvgl.h:
 
 ../src/ASF/thirdparty/lvgl8/src/extra/widgets/spinbox/../../../../src/extra/widgets/span/lv_span.h:
 
-../src/ASF/thirdparty/lvgl8/src/extra/widgets/spinbox/../../../../src/extra/widgets/span/../../../lvgl.h:
+c:\users\ellen\ shen\desktop\22a-emb-labs-ellenbs\lab7-rtos-lcd-lvgl\src\asf\thirdparty\lvgl8\src\lvgl.h:
 
 ../src/ASF/thirdparty/lvgl8/src/extra/widgets/spinbox/../../../../src/extra/layouts/lv_layouts.h:
 
@@ -645,13 +645,13 @@ c:\users\ellen\ shen\desktop\same70-examples\screens\rtos-tft-lcd-ili9341-lvgl\s
 
 ../src/ASF/thirdparty/lvgl8/src/extra/widgets/spinbox/../../../../src/extra/layouts/grid/lv_grid.h:
 
-../src/ASF/thirdparty/lvgl8/src/extra/widgets/spinbox/../../../../src/extra/layouts/grid/../../../core/lv_obj.h:
+c:\users\ellen\ shen\desktop\22a-emb-labs-ellenbs\lab7-rtos-lcd-lvgl\src\asf\thirdparty\lvgl8\src\core\lv_obj.h:
 
 ../src/ASF/thirdparty/lvgl8/src/extra/widgets/spinbox/../../../../src/extra/themes/lv_themes.h:
 
 ../src/ASF/thirdparty/lvgl8/src/extra/widgets/spinbox/../../../../src/extra/themes/default/lv_theme_default.h:
 
-../src/ASF/thirdparty/lvgl8/src/extra/widgets/spinbox/../../../../src/extra/themes/default/../../../core/lv_obj.h:
+c:\users\ellen\ shen\desktop\22a-emb-labs-ellenbs\lab7-rtos-lcd-lvgl\src\asf\thirdparty\lvgl8\src\core\lv_obj.h:
 
 ../src/ASF/thirdparty/lvgl8/src/extra/widgets/spinbox/../../../../src/extra/themes/mono/lv_theme_mono.h:
 
@@ -659,15 +659,15 @@ c:\users\ellen\ shen\desktop\same70-examples\screens\rtos-tft-lcd-ili9341-lvgl\s
 
 ../src/ASF/thirdparty/lvgl8/src/extra/widgets/spinbox/../../../../src/extra/themes/basic/lv_theme_basic.h:
 
-../src/ASF/thirdparty/lvgl8/src/extra/widgets/spinbox/../../../../src/extra/themes/basic/../../../core/lv_obj.h:
+c:\users\ellen\ shen\desktop\22a-emb-labs-ellenbs\lab7-rtos-lcd-lvgl\src\asf\thirdparty\lvgl8\src\core\lv_obj.h:
 
 ../src/ASF/thirdparty/lvgl8/src/extra/widgets/spinbox/../../../../src/extra/others/lv_others.h:
 
 ../src/ASF/thirdparty/lvgl8/src/extra/widgets/spinbox/../../../../src/extra/others/snapshot/lv_snapshot.h:
 
-../src/ASF/thirdparty/lvgl8/src/extra/widgets/spinbox/../../../../src/extra/others/snapshot/../../../lv_conf_internal.h:
+c:\users\ellen\ shen\desktop\22a-emb-labs-ellenbs\lab7-rtos-lcd-lvgl\src\asf\thirdparty\lvgl8\src\lv_conf_internal.h:
 
-../src/ASF/thirdparty/lvgl8/src/extra/widgets/spinbox/../../../../src/extra/others/snapshot/../../../core/lv_obj.h:
+c:\users\ellen\ shen\desktop\22a-emb-labs-ellenbs\lab7-rtos-lcd-lvgl\src\asf\thirdparty\lvgl8\src\core\lv_obj.h:
 
 ../src/ASF/thirdparty/lvgl8/src/extra/widgets/spinbox/../../../../src/extra/libs/lv_libs.h:
 
@@ -717,10 +717,10 @@ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-no
 
 ../src/ASF/thirdparty/lvgl8/src/extra/widgets/spinbox/../../../../src/extra/libs/freetype/lv_freetype.h:
 
-../src/ASF/thirdparty/lvgl8/src/extra/widgets/spinbox/../../../../src/extra/libs/freetype/../../../lvgl.h:
+c:\users\ellen\ shen\desktop\22a-emb-labs-ellenbs\lab7-rtos-lcd-lvgl\src\asf\thirdparty\lvgl8\src\lvgl.h:
 
 ../src/ASF/thirdparty/lvgl8/src/extra/widgets/spinbox/../../../../src/extra/libs/rlottie/lv_rlottie.h:
 
-../src/ASF/thirdparty/lvgl8/src/extra/widgets/spinbox/../../../../src/extra/libs/rlottie/../../../lvgl.h:
+c:\users\ellen\ shen\desktop\22a-emb-labs-ellenbs\lab7-rtos-lcd-lvgl\src\asf\thirdparty\lvgl8\src\lvgl.h:
 
 ../src/ASF/thirdparty/lvgl8/src/extra/widgets/spinbox/../../../misc/lv_assert.h:

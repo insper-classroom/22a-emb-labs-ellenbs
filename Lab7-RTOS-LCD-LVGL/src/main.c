@@ -23,6 +23,12 @@ static lv_color_t buf_1[LV_HOR_RES_MAX * LV_VER_RES_MAX];
 static lv_disp_drv_t disp_drv;          /*A variable to hold the drivers. Must be static or global.*/
 static lv_indev_drv_t indev_drv;
 
+volatile static  lv_obj_t * labelBtn1;
+volatile static  lv_obj_t * labelBtnMenu;
+volatile static  lv_obj_t * labelBtnClock;
+volatile static  lv_obj_t * labelBtnUp;
+volatile static  lv_obj_t * labelBtnDown;
+
 /************************************************************************/
 /* RTOS                                                                 */
 /************************************************************************/
@@ -64,27 +70,105 @@ static void event_handler(lv_event_t * e) {
 	}
 }
 
-void lv_ex_btn_1(void) {
-	lv_obj_t * label;
+static void menu_handler(lv_event_t * e) {
+	lv_event_code_t code = lv_event_get_code(e);
 
-	lv_obj_t * btn1 = lv_btn_create(lv_scr_act());
-	lv_obj_add_event_cb(btn1, event_handler, LV_EVENT_ALL, NULL);
-	lv_obj_align(btn1, LV_ALIGN_CENTER, 0, -40);
-
-	label = lv_label_create(btn1);
-	lv_label_set_text(label, "Corsi");
-	lv_obj_center(label);
-
-	lv_obj_t * btn2 = lv_btn_create(lv_scr_act());
-	lv_obj_add_event_cb(btn2, event_handler, LV_EVENT_ALL, NULL);
-	lv_obj_align(btn2, LV_ALIGN_CENTER, 0, 40);
-	lv_obj_add_flag(btn2, LV_OBJ_FLAG_CHECKABLE);
-	lv_obj_set_height(btn2, LV_SIZE_CONTENT);
-
-	label = lv_label_create(btn2);
-	lv_label_set_text(label, "Toggle");
-	lv_obj_center(label);
+	if(code == LV_EVENT_CLICKED) {
+		LV_LOG_USER("Clicked");
+	}
+	else if(code == LV_EVENT_VALUE_CHANGED) {
+		LV_LOG_USER("Toggled");
+	}
 }
+
+static void clock_handler(lv_event_t * e) {
+	lv_event_code_t code = lv_event_get_code(e);
+
+	if(code == LV_EVENT_CLICKED) {
+		LV_LOG_USER("Clicked");
+	}
+	else if(code == LV_EVENT_VALUE_CHANGED) {
+		LV_LOG_USER("Toggled");
+	}
+}
+
+static void up_handler(lv_event_t * e) {
+	lv_event_code_t code = lv_event_get_code(e);
+
+	if(code == LV_EVENT_CLICKED) {
+		LV_LOG_USER("Clicked");
+	}
+	else if(code == LV_EVENT_VALUE_CHANGED) {
+		LV_LOG_USER("Toggled");
+	}
+}
+
+static void down_handler(lv_event_t * e) {
+	lv_event_code_t code = lv_event_get_code(e);
+
+	if(code == LV_EVENT_CLICKED) {
+		LV_LOG_USER("Clicked");
+	}
+	else if(code == LV_EVENT_VALUE_CHANGED) {
+		LV_LOG_USER("Toggled");
+	}
+}
+
+void lv_termostato(void) {
+	
+	static lv_style_t style;
+	
+	lv_style_init(&style);
+	lv_style_set_bg_color(&style, lv_color_black());
+	lv_style_set_border_width(&style, 0);
+
+    lv_obj_t * btn1 = lv_btn_create(lv_scr_act());
+    lv_obj_add_event_cb(btn1, event_handler, LV_EVENT_ALL, NULL);
+    lv_obj_align(btn1, LV_ALIGN_BOTTOM_LEFT, 10, -20);
+
+    labelBtn1 = lv_label_create(btn1);
+    lv_label_set_text(labelBtn1, "[ " LV_SYMBOL_POWER);
+    lv_obj_center(labelBtn1);
+	lv_obj_add_style(btn1, &style, 0);
+	
+	lv_obj_t * btnMenu = lv_btn_create(lv_scr_act());
+	lv_obj_add_event_cb(btnMenu, menu_handler, LV_EVENT_ALL, NULL);
+	lv_obj_align_to(btnMenu, btn1, LV_ALIGN_OUT_RIGHT_MID, 0, -20/2);
+
+	labelBtnMenu = lv_label_create(btnMenu);
+	lv_label_set_text(labelBtnMenu, "| M |");
+	lv_obj_center(labelBtnMenu);
+	lv_obj_add_style(btnMenu, &style, 0);
+	
+	lv_obj_t * btnClock = lv_btn_create(lv_scr_act());
+	lv_obj_add_event_cb(btnClock, clock_handler, LV_EVENT_ALL, NULL);
+	lv_obj_align_to(btnClock, btnMenu, LV_ALIGN_OUT_RIGHT_MID, 0, -20/2);
+
+	labelBtnClock = lv_label_create(btnClock);
+	lv_label_set_text(labelBtnClock, LV_SYMBOL_SETTINGS " ]");
+	lv_obj_center(labelBtnClock);
+	lv_obj_add_style(btnClock, &style, 0);
+	
+	lv_obj_t * downBut = lv_btn_create(lv_scr_act());
+	lv_obj_add_event_cb(downBut, down_handler, LV_EVENT_ALL, NULL);
+	lv_obj_align(downBut, LV_ALIGN_BOTTOM_RIGHT, -10, -20);
+	
+	labelBtnDown = lv_label_create(downBut);
+	lv_label_set_text(labelBtnDown, LV_SYMBOL_DOWN " ]");
+	lv_obj_center(labelBtnDown);
+	lv_obj_add_style(downBut, &style, 0);
+	
+	lv_obj_t * upBtn = lv_btn_create(lv_scr_act());
+	lv_obj_add_event_cb(upBtn, event_handler, LV_EVENT_ALL, NULL);
+	lv_obj_align_to(upBtn, downBut ,LV_ALIGN_OUT_LEFT_MID, -20, -20/2);
+	
+	labelBtnUp = lv_label_create(upBtn);
+	lv_label_set_text(labelBtnUp, "[ " LV_SYMBOL_UP);
+	lv_obj_center(labelBtnUp);
+	lv_obj_add_style(upBtn, &style, 0);
+
+}
+
 
 /************************************************************************/
 /* TASKS                                                                */
@@ -93,8 +177,7 @@ void lv_ex_btn_1(void) {
 static void task_lcd(void *pvParameters) {
 	int px, py;
 
-	lv_ex_btn_1();
-
+	lv_termostato();
 	for (;;)  {
 		lv_tick_inc(50);
 		lv_task_handler();

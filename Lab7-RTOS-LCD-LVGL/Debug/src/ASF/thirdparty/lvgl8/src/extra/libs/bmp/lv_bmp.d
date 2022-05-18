@@ -176,7 +176,7 @@ src/ASF/thirdparty/lvgl8/src/extra/libs/bmp/lv_bmp.d \
  ../src/ASF/thirdparty/lvgl8/src/extra/libs/bmp/../../../../src/extra/widgets/list/lv_list.h \
  ../src/ASF/thirdparty/lvgl8/src/extra/libs/bmp/../../../../src/extra/widgets/list/../../../core/lv_obj.h \
  ../src/ASF/thirdparty/lvgl8/src/extra/libs/bmp/../../../../src/extra/widgets/list/../../layouts/flex/lv_flex.h \
- c:\users\ellen\ shen\desktop\same70-examples\screens\rtos-tft-lcd-ili9341-lvgl\src\asf\thirdparty\lvgl8\src\core\lv_obj.h \
+ c:\users\ellen\ shen\desktop\22a-emb-labs-ellenbs\lab7-rtos-lcd-lvgl\src\asf\thirdparty\lvgl8\src\core\lv_obj.h \
  ../src/ASF/thirdparty/lvgl8/src/extra/libs/bmp/../../../../src/extra/widgets/msgbox/lv_msgbox.h \
  ../src/ASF/thirdparty/lvgl8/src/extra/libs/bmp/../../../../src/extra/widgets/msgbox/../../../lvgl.h \
  ../src/ASF/thirdparty/lvgl8/src/extra/libs/bmp/../../../../src/extra/widgets/meter/lv_meter.h \
@@ -592,7 +592,7 @@ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-no
 
 ../src/ASF/thirdparty/lvgl8/src/extra/libs/bmp/../../../../src/extra/widgets/list/../../layouts/flex/lv_flex.h:
 
-c:\users\ellen\ shen\desktop\same70-examples\screens\rtos-tft-lcd-ili9341-lvgl\src\asf\thirdparty\lvgl8\src\core\lv_obj.h:
+c:\users\ellen\ shen\desktop\22a-emb-labs-ellenbs\lab7-rtos-lcd-lvgl\src\asf\thirdparty\lvgl8\src\core\lv_obj.h:
 
 ../src/ASF/thirdparty/lvgl8/src/extra/libs/bmp/../../../../src/extra/widgets/msgbox/lv_msgbox.h:
 
