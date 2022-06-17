@@ -6,6 +6,28 @@
 #include "socket/include/socket.h"
 #include "util.h"
 
+
+#define LED_PIO         PIOC
+#define LED_PIO_ID			ID_PIOC
+#define LED_PIO_IDX			8
+#define LED_PIO_IDX_MASK    (1 << LED_PIO_IDX)
+
+#define LED1_PIO			  PIOA
+#define LED1_PIO_ID			ID_PIOA
+#define LED1_PIO_IDX		0
+#define LED1_PIO_IDX_MASK  (1 << LED1_PIO_IDX)
+
+#define LED2_PIO			  PIOC
+#define LED2_PIO_ID			ID_PIOC
+#define LED2_PIO_IDX		30
+#define LED2_PIO_IDX_MASK  (1 << LED2_PIO_IDX)
+
+#define LED3_PIO			  PIOB
+#define LED3_PIO_ID			ID_PIOB
+#define LED3_PIO_IDX		2
+#define LED3_PIO_IDX_MASK  (1 << LED3_PIO_IDX)
+
+
 /************************************************************************/
 /* WIFI                                                                 */
 /************************************************************************/
@@ -79,6 +101,28 @@ extern void vApplicationMallocFailedHook(void){
 /************************************************************************/
 /* funcoes                                                              */
 /************************************************************************/
+
+void init() {
+	pmc_enable_periph_clk(LED_PIO_ID);
+	pio_configure(LED_PIO, PIO_OUTPUT_1, LED_PIO_IDX_MASK, PIO_DEFAULT);
+
+  pmc_enable_periph_clk(LED1_PIO_ID);
+	pio_configure(LED1_PIO, PIO_OUTPUT_1, LED1_PIO_IDX_MASK, PIO_DEFAULT);
+
+  pmc_enable_periph_clk(LED2_PIO_ID);
+	pio_configure(LED2_PIO, PIO_OUTPUT_1, LED2_PIO_IDX_MASK, PIO_DEFAULT);
+
+  pmc_enable_periph_clk(LED3_PIO_ID);
+	pio_configure(LED3_PIO, PIO_OUTPUT_1, LED3_PIO_IDX_MASK, PIO_DEFAULT);
+}
+
+void led_on() {
+	pio_clear(LED_PIO,LED_PIO_IDX_MASK);
+}
+
+void led_off() {
+	pio_set(LED_PIO,LED_PIO_IDX_MASK);
+}
 
 /************************************************************************/
 /* callbacks                                                            */
@@ -285,6 +329,18 @@ static void task_process(void *pvParameters) {
         printf(p_recvMsg->pu8Buffer);
         printf(STRING_EOL);  printf(STRING_LINE);
         state = DONE;
+
+        char sub[10] = "led";
+        char estado;
+        char *ret = strstr(p_recvMsg->pu8Buffer,sub);
+        estado =ret[6];
+        if (estado == '1'){
+          led_on();
+        }else if ( estado == '0'){
+          led_off();
+        } else {
+          printf(estado);
+        }
       }
       else {
         state = TIMEOUT;
@@ -378,6 +434,7 @@ int main(void)
   /* Initialize the board. */
   sysclk_init();
   board_init();
+  init();
 
   /* Initialize the UART console. */
   configure_console();
